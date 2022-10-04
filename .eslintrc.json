@@ -7,7 +7,7 @@
   "parserOptions": {
     "sourceType": "module"
   },
-  "plugins": ["simple-import-sort"],
+  "plugins": ["simple-import-sort", "sort-keys-custom-order"],
   "extends": [
     "next/core-web-vitals",
     "plugin:react/recommended",
@@ -20,7 +20,15 @@
     "simple-import-sort/imports": "error",
     "sort-imports": ["error", { "ignoreDeclarationSort": true }],
     "react/prop-types": "off",
-    "no-undef": "error"
+    "no-undef": "error",
+    "sort-keys-custom-order/object-keys": [
+      "error",
+      { "orderedKeys": ["id", "name", "title"] }
+    ],
+    "sort-keys-custom-order/type-keys": [
+      "error",
+      { "orderedKeys": ["id", "name", "title"] }
+    ]
   },
   "settings": {
     "react": {
