@@ -7,7 +7,12 @@
   "parserOptions": {
     "sourceType": "module"
   },
-  "plugins": ["simple-import-sort", "sort-keys-custom-order", "import"],
+  "plugins": [
+    "simple-import-sort",
+    "sort-keys-custom-order",
+    "import",
+    "unused-imports"
+  ],
   "extends": [
     "next/core-web-vitals",
     "plugin:react/recommended",
@@ -32,7 +37,8 @@
     "sort-imports": ["error", { "ignoreDeclarationSort": true }],
     "import/first": "error",
     "import/newline-after-import": "error",
-    "import/no-duplicates": "error"
+    "import/no-duplicates": "error",
+    "unused-imports/no-unused-imports": "error"
   },
   "settings": {
     "react": {
